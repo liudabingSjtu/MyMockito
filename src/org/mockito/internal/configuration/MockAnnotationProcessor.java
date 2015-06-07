@@ -30,6 +30,7 @@ public class MockAnnotationProcessor implements FieldAnnotationProcessor<Mock> {
 
         // see @Mock answer default value
         mockSettings.defaultAnswer(annotation.answer());
+        //根据MockSettings来Mock对象
         return Mockito.mock(field.getType(), mockSettings);
     }
 }

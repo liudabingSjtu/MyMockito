@@ -29,7 +29,7 @@ public class MockUtil {
 
     public <T> T createMock(MockCreationSettings<T> settings) {
         MockHandler mockHandler = new MockHandlerFactory().create(settings);
-
+        //根据一个Handler和settings创建Mock对象，并将Mock对象与Handler关联起来
         T mock = mockMaker.createMock(settings, mockHandler);
 
         Object spiedInstance = settings.getSpiedInstance();
